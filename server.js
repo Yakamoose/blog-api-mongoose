@@ -82,7 +82,7 @@ app.put('/posts/:id', (req, res) => {
 
   BlogPost
     .findByIdAndUpdate(req.params.id, { $set: toUpdate })
-    .then(post => res.status(200).json(posst.serialize()))
+    .then(post => res.status(200).json(post.serialize()))
     .catch(err => {
       console.error(err);
       res.status(500).json({ message: 'Internal server error' });
