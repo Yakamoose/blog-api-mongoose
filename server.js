@@ -89,6 +89,8 @@ app.put('/posts/:id', (req, res) => {
     });
 });
 
+
+
 app.delete('/posts/:id', (req, res) => {
   BlogPost
   .findByIdAndRemove(req.params.id)
